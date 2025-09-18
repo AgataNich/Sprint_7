@@ -1,7 +1,8 @@
 import pytest
 import requests
 import allure
-from data import ResponseBody, Url
+from data import ResponseBody, NegativeCourierData
+from urls import Url
 
 @allure.epic('Courier API. Handle: /api/v1/courier/')
 class TestCreateNewCourier:
@@ -36,10 +37,7 @@ class TestCreateNewCourier:
             assert resp.json()['message'] == ResponseBody.COURIER_NAME_ALREADY_EXIST['message']
 
     @allure.title('Создание курьера без логина или пароля — 400')
-    @pytest.mark.parametrize('bad_data', [
-        {'firstName': 'Saske', 'password': '12345'},
-        {'firstName': 'Saske', 'login': 'saske123'}
-    ])
+    @pytest.mark.parametrize('bad_data', NegativeCourierData.BAD_DATA_LIST)
     def test_creation_courier_deficit_data_error(self, bad_data):
         with allure.step('Отправка POST запроса с неполными данными'):
             resp = requests.post(f'{Url.BASE_URL}{Url.CREATE_COURIER}', json=bad_data)

@@ -1,7 +1,8 @@
 import pytest
 import allure
 import requests
-from data import Url, Flags
+from data import Flags
+from urls import Url
 
 @allure.epic('Order list API. Handle: /api/v1/orders')
 class TestGetOrderList:

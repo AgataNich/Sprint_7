@@ -27,15 +27,16 @@
 
 <h3 align="left" style="color:green">Project files and description:</h3>
 
-| Название файла         | Содержание файла                          |
-|------------------------|-------------------------------------------|
-| Tests dir              | Директория с тестами                      |
-| test_create_courier.py | Проверка создания новоого курьера         |
-| test_get_order_list.py | Проверка получения списка заказов         |
-| test_login_courier.py  | Проверка авторизации курьера              |
-| test_make_order.py     | Проверка оформления заказа                |
-| conftest.py            | Фикстуры                                  |
-| data.py                | Данные для входа, регистрации и API ручки |
-| requirements.txt       | Файл с зависимостями                      |
-| allure_results.dir     | Папка с отчетами Allure                   |
-| README.md              | Документация                              |
+| Название файла         | Содержание файла                  |
+|------------------------|-----------------------------------|
+| Tests dir              | Директория с тестами              |
+| test_create_courier.py | Проверка создания новоого курьера |
+| test_get_order_list.py | Проверка получения списка заказов |
+| test_login_courier.py  | Проверка авторизации курьера      |
+| test_make_order.py     | Проверка оформления заказа        |
+| conftest.py            | Фикстуры                          |
+| data.py                | Данные для входа, регистрации     |
+| urls.py                | Url и API ручки                   |
+| requirements.txt       | Файл с зависимостями              |
+| allure_results.dir     | Папка с отчетами Allure           |
+| README.md              | Документация                      |

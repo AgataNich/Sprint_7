@@ -2,7 +2,8 @@ import pytest
 import requests
 import allure
 import generators
-from data import ResponseBody, Url
+from data import ResponseBody
+from urls import Url
 
 
 @allure.epic('Login courier API. Handle: /api/v1/courier/login')

@@ -1,14 +1,3 @@
-class Url:
-    BASE_URL = 'https://qa-scooter.praktikum-services.ru/'
-    CREATE_COURIER = 'api/v1/courier'
-    COURIER_LOGIN = 'api/v1/courier/login'
-    COURIER_DELETE = 'api/v1/courier/'
-    CREATE_ORDER = 'api/v1/orders'
-    GET_ORDER_LIST = 'api/v1/orders'
-    ORDER_CANCEL = 'api/v1/orders/cancel?track='
-    TRACK_ORDER = '/api/v1/orders/track?t='
-
-
 class DataForOrder:
     order_data = {
         "firstName": "Ola",
@@ -34,4 +23,12 @@ class ResponseBody:
 class Flags:
     SUCCESSFUL_ORDER_CREATION = 'track'
     SUCCESSFUL_GET_ORDER_LIST = 'orders'
+
+
+
+class NegativeCourierData:
+    BAD_DATA_LIST = [
+        {'firstName': 'Saske', 'password': '12345'},
+        {'firstName': 'Saske', 'login': 'saske123'}
+    ]
 
